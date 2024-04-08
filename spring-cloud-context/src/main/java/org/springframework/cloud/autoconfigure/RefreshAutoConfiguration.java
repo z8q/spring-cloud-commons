@@ -126,6 +126,7 @@ public class RefreshAutoConfiguration {
 	}
 
 	@Bean
+	@ConditionalOnMissingBean
 	public RefreshEventListener refreshEventListener(ContextRefresher contextRefresher) {
 		return new RefreshEventListener(contextRefresher);
 	}
